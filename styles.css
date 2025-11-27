@@ -11,3 +11,34 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+#main-gallery-container {
+  border: 2px solid black;
+  padding: 1px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#slider-gallery-container {
+  position: absolute;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#slider-img {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 100px;
+  height: 66px;
+  padding: 5px;
+}
+
+input {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}

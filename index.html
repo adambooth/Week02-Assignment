@@ -11,10 +11,23 @@
     <header>
       <h1>Animals Gallery</h1>
       <section>
-        <div id="photo-gallery-container">
-          <button id="previous-img-btn"><</button>
-          <img id="photo-gallery" src="" alt="" />
-          <button id="next-img-btn">></button>
+        <div id="main-gallery-container">
+          <div id="slider-gallery-container">
+            <img id="slider-img" src="./media/images/elephant.jpg" />
+            <input
+              type="range"
+              min="0"
+              max="4"
+              value="0"
+              step="1"
+              class="slider"
+            />
+          </div>
+          <div id="photo-gallery-container">
+            <button id="previous-img-btn"><</button>
+            <img id="photo-gallery" src="" alt="" />
+            <button id="next-img-btn">></button>
+          </div>
         </div>
       </section>
     </header>
