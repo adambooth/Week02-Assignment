@@ -1,0 +1,13 @@
+img {
+  width: 700px;
+  height: auto;
+}
+
+#photo-gallery-container {
+  width: auto;
+  border: 2px solid black;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
