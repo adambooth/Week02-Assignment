@@ -1,44 +1,111 @@
-img {
-  width: 700px;
-  height: auto;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#photo-gallery-container {
-  width: auto;
+#main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#fullscreen-container {
   border: 2px solid black;
-  padding: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#main-gallery-container {
-  border: 2px solid black;
-  padding: 1px;
-  position: relative;
+#thumbnail-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-}
-
-#slider-gallery-container {
+  align-items: center;
   position: absolute;
-  margin: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+  margin: 30px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.37);
 }
 
-#slider-img {
-  grid-row-start: 1;
-  grid-column-start: 2;
-  grid-column-end: 3;
+#elephantImg {
   width: 100px;
-  height: 66px;
-  padding: 5px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-input {
-  grid-row-start: 2;
-  grid-column-start: 2;
+#foxImg {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#leopardImg {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#raccoonImg {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#tigerImg {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#fullscreen-elephantImg {
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#fullscreen-foxImg {
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#fullscreen-leopardImg {
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#fullscreen-raccoonImg {
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#fullscreen-tigerImg {
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#next-btn {
+  width: 50px;
+  height: 50px;
+}
+
+#previous-btn {
+  width: 50px;
+  height: 50px;
 }
