@@ -2,7 +2,7 @@ console.log("Hello World!");
 
 const fullscreenImg = document.getElementById("fullscreen-img");
 
-const imageData = [
+const imagesArray = [
   {
     idName: "elephantImg",
     imageSrc: "./media/images/elephant.jpg",
@@ -30,16 +30,20 @@ const imageData = [
   },
 ];
 
+const fullscreenContainer = document.getElementById("fullscreen-container");
+const nextBtn = document.createElement("button");
+const previousBtn = document.createElement("button");
+const thumbnailContainer = document.getElementById("thumbnail-container");
+
 function CreateFullscreenImages(event) {
-  const fullscreenContainer = document.getElementById("fullscreen-container");
   fullscreenContainer.innerHTML = "";
   const fullscreenImg = document.createElement("img");
-  const nextBtn = document.createElement("button");
-  const previousBtn = document.createElement("button");
   nextBtn.id = "next-btn";
   nextBtn.textContent = ">";
   previousBtn.id = "previous-btn";
   previousBtn.textContent = "<";
+  nextBtn.setAttribute("aria-label", "Next image");
+  previousBtn.setAttribute("aria-label", "Previous image");
   fullscreenImg.id = "fullscreen-" + event.target.id;
   fullscreenImg.src = event.target.src;
   fullscreenImg.alt = event.target.alt;
@@ -50,15 +54,22 @@ function CreateFullscreenImages(event) {
 }
 
 function createThumbnails() {
-  const thumbnailContainer = document.getElementById("thumbnail-container");
-  for (let i = 0; i < imageData.length; i++) {
+  for (let i = 0; i < imagesArray.length; i++) {
     const img = document.createElement("img");
-    img.id = imageData[i].idName;
-    img.src = imageData[i].imageSrc;
-    img.alt = imageData[i].imageAlt;
+    img.id = imagesArray[i].idName;
+    img.src = imagesArray[i].imageSrc;
+    img.alt = imagesArray[i].imageAlt;
     img.addEventListener("click", CreateFullscreenImages);
     thumbnailContainer.appendChild(img);
   }
 }
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowRight") {
+    console.log("Right Arrow key pressed");
+  } else if (event.key === "ArrowLeft") {
+    console.log("Left Arrow key pressed");
+  }
+});
 
 createThumbnails();
