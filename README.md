@@ -17,6 +17,7 @@ Requested Feedback :
 i would like some feedback on the stretch requirement `Use ‘srcset’ to specify which image will be used based on the size of the screen for optimal viewing experience.`
 
 External Help :
+Chatgpt(ELI5) only used to talk me through mistakes and guide me to fixing them without giving me answers. i only used this to help fix responsivness as i had a problem when the screen size went under 600px in width the body was shrinking. it helped me identify the problem and solve it on my own using correct positioning,min/max width and display format.
 
 I Learnt :
 
