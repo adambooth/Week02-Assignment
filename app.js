@@ -122,4 +122,5 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+displayFullscreenImage(0);
 createThumbnails();
