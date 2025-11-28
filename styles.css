@@ -62,14 +62,66 @@ body {
   align-items: center;
 }
 
-#thumbnail-img {
+#thumbnail-elephantImg {
   max-width: 100px;
   height: auto;
   padding: 10px;
   border-radius: 20px;
 }
 
-#thumbnail-img:hover {
+#thumbnail-foxImg {
+  max-width: 100px;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#thumbnail-leopardImg {
+  max-width: 100px;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#thumbnail-raccoonImg {
+  max-width: 100px;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#thumbnail-tigerImg {
+  max-width: 100px;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#thumbnail-elephantImg:hover {
+  padding: 5px;
+  border-radius: 22px;
+  background-color: rgb(54, 54, 54);
+}
+
+#thumbnail-foxImg:hover {
+  padding: 5px;
+  border-radius: 22px;
+  background-color: rgb(54, 54, 54);
+}
+
+#thumbnail-leopardImg:hover {
+  padding: 5px;
+  border-radius: 22px;
+  background-color: rgb(54, 54, 54);
+}
+
+#thumbnail-raccoonImg:hover {
+  padding: 5px;
+  border-radius: 22px;
+  background-color: rgb(54, 54, 54);
+}
+
+#thumbnail-tigerImg:hover {
   padding: 5px;
   border-radius: 22px;
   background-color: rgb(54, 54, 54);
@@ -89,6 +141,8 @@ body {
   background-color: rgba(0, 0, 0, 0.37);
   color: white;
   font-weight: bold;
+  border: 0;
+  border-radius: 20px;
 }
 
 #previous-btn {
@@ -97,6 +151,8 @@ body {
   background-color: rgba(0, 0, 0, 0.37);
   color: white;
   font-weight: bold;
+  border: 0;
+  border-radius: 20px;
 }
 
 #next-btn:focus {
@@ -104,13 +160,38 @@ body {
   padding: 1px;
 }
 
-#thumbnail-img:focus {
+#thumbnail-elephantImg:focus {
+  background-color: rgba(192, 192, 192, 0.37);
+  padding: 1px;
+}
+
+#thumbnail-foxImg:focus {
+  background-color: rgba(192, 192, 192, 0.37);
+  padding: 1px;
+}
+
+#thumbnail-leopardImg:focus {
+  background-color: rgba(192, 192, 192, 0.37);
+  padding: 1px;
+}
+
+#thumbnail-raccoonImg:focus {
+  background-color: rgba(192, 192, 192, 0.37);
+  padding: 1px;
+}
+
+#thumbnail-tigerImg:focus {
   background-color: rgba(192, 192, 192, 0.37);
   padding: 1px;
 }
 
 #previous-btn:focus {
   background-color: rgba(192, 192, 192, 0.37);
+}
+
+.elephantClass:focus {
+  padding: 100px;
+  background-color: rgb(255, 0, 0);
 }
 
 @media (max-width: 900px) {
@@ -161,7 +242,23 @@ body {
     border-radius: 20px;
   }
 
-  #thumbnail-img {
+  #thumbnail-elephantImg {
+    max-width: 75px;
+  }
+
+  #thumbnail-foxImg {
+    max-width: 75px;
+  }
+
+  #thumbnail-tigerImg {
+    max-width: 75px;
+  }
+
+  #thumbnail-raccoonImg {
+    max-width: 75px;
+  }
+
+  #thumbnail-tigerImg {
     max-width: 75px;
   }
 }
@@ -226,7 +323,23 @@ body {
     margin-top: 10px;
   }
 
-  #thumbnail-img {
+  #thumbnail-elephantImg {
+    max-width: 60px;
+  }
+
+  #thumbnail-foxImg {
+    max-width: 60px;
+  }
+
+  #thumbnail-leopardImg {
+    max-width: 60px;
+  }
+
+  #thumbnail-raccoonImg {
+    max-width: 60px;
+  }
+
+  #thumbnail-elephantImg {
     max-width: 60px;
   }
 

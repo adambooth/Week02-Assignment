@@ -92,7 +92,7 @@ previousBtn.addEventListener("click", function () {
 function createThumbnails() {
   for (let i = 0; i < imagesArray.length; i++) {
     const img = document.createElement("img");
-    img.id = "thumbnail-img";
+    img.id = "thumbnail-" + imagesArray[i].idName;
     img.src = imagesArray[i].imageSrc;
     img.alt = imagesArray[i].imageAlt;
     img.tabIndex = imagesArray[i].tabIndex;
