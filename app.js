@@ -7,26 +7,31 @@ const imagesArray = [
     idName: "elephantImg",
     imageSrc: "./media/images/elephant.jpg",
     imageAlt: "picture of elephants",
+    imgIndex: 0,
   },
   {
     idName: "foxImg",
     imageSrc: "./media/images/fox.jpg",
     imageAlt: "picture of a fox",
+    imgIndex: 1,
   },
   {
     idName: "leopardImg",
     imageSrc: "./media/images/leopard.jpg",
     imageAlt: "picture of a leopard",
+    imgIndex: 2,
   },
   {
     idName: "raccoonImg",
     imageSrc: "./media/images/raccoon.jpg",
     imageAlt: "picture of a raccoon",
+    imgIndex: 3,
   },
   {
     idName: "tigerImg",
     imageSrc: "./media/images/tiger.jpg",
     imageAlt: "picture of a tiger",
+    imgIndex: 4,
   },
 ];
 
@@ -34,41 +39,68 @@ const fullscreenContainer = document.getElementById("fullscreen-container");
 const nextBtn = document.createElement("button");
 const previousBtn = document.createElement("button");
 const thumbnailContainer = document.getElementById("thumbnail-container");
+nextBtn.id = "next-btn";
+nextBtn.textContent = ">";
+previousBtn.id = "previous-btn";
+previousBtn.textContent = "<";
+nextBtn.setAttribute("aria-label", "Next image");
+previousBtn.setAttribute("aria-label", "Previous image");
 
-function CreateFullscreenImages(event) {
+let currentImageIndex = 0;
+
+function displayFullscreenImage(index) {
   fullscreenContainer.innerHTML = "";
   const fullscreenImg = document.createElement("img");
-  nextBtn.id = "next-btn";
-  nextBtn.textContent = ">";
-  previousBtn.id = "previous-btn";
-  previousBtn.textContent = "<";
-  nextBtn.setAttribute("aria-label", "Next image");
-  previousBtn.setAttribute("aria-label", "Previous image");
-  fullscreenImg.id = "fullscreen-" + event.target.id;
-  fullscreenImg.src = event.target.src;
-  fullscreenImg.alt = event.target.alt;
-  fullscreenImg.idName = "fullscreen-img";
+  fullscreenImg.id = "fullscreen-img";
+  fullscreenImg.src = imagesArray[index].imageSrc;
+  fullscreenImg.alt = imagesArray[index].imageAlt;
   fullscreenContainer.appendChild(previousBtn);
   fullscreenContainer.appendChild(fullscreenImg);
   fullscreenContainer.appendChild(nextBtn);
 }
 
+nextBtn.addEventListener("click", function () {
+  currentImageIndex++;
+
+  if (currentImageIndex >= imagesArray.length) {
+    currentImageIndex = 0;
+  }
+
+  displayFullscreenImage(currentImageIndex);
+});
+
+previousBtn.addEventListener("click", function () {
+  currentImageIndex--;
+
+  if (currentImageIndex < 0) {
+    currentImageIndex = imagesArray.length - 1;
+  }
+
+  displayFullscreenImage(currentImageIndex);
+});
+
 function createThumbnails() {
   for (let i = 0; i < imagesArray.length; i++) {
     const img = document.createElement("img");
-    img.id = imagesArray[i].idName;
+    img.id = "thumbnail-img";
     img.src = imagesArray[i].imageSrc;
     img.alt = imagesArray[i].imageAlt;
-    img.addEventListener("click", CreateFullscreenImages);
+
+    let index = imagesArray[i].imgIndex;
+
+    img.addEventListener("click", () => {
+      displayFullscreenImage(index);
+    });
+
     thumbnailContainer.appendChild(img);
   }
 }
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowRight") {
-    console.log("Right Arrow key pressed");
+    nextBtn.click();
   } else if (event.key === "ArrowLeft") {
-    console.log("Left Arrow key pressed");
+    previousBtn.click();
   }
 });
 

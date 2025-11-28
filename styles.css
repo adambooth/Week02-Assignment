@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+body {
+  background-color: grey;
+}
+
 #main-container {
   display: flex;
   flex-direction: column;
@@ -30,7 +42,7 @@
   background-color: rgba(0, 0, 0, 0.37);
 }
 
-#elephantImg {
+#thumbnail-img {
   min-width: none;
   max-width: 100px;
   height: auto;
@@ -38,71 +50,7 @@
   border-radius: 20px;
 }
 
-#foxImg {
-  min-width: none;
-  max-width: 100px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#leopardImg {
-  min-width: none;
-  max-width: 100px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#raccoonImg {
-  min-width: none;
-  max-width: 100px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#tigerImg {
-  min-width: none;
-  max-width: 100px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#fullscreen-elephantImg {
-  min-width: none;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#fullscreen-foxImg {
-  min-width: none;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#fullscreen-leopardImg {
-  min-width: none;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#fullscreen-raccoonImg {
-  min-width: none;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-#fullscreen-tigerImg {
+#fullscreen-img {
   min-width: none;
   max-width: 600px;
   height: auto;
