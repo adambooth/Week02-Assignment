@@ -9,7 +9,7 @@ header {
   align-items: center;
   justify-content: center;
   margin: 30px;
-  min-width: none;
+  width: 100%;
 }
 
 body {
@@ -21,6 +21,8 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr;
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #next-btn-container {
@@ -61,7 +63,6 @@ body {
 }
 
 #thumbnail-img {
-  min-width: none;
   max-width: 100px;
   height: auto;
   padding: 10px;
@@ -75,8 +76,8 @@ body {
 }
 
 #fullscreen-img {
-  min-width: none;
   max-width: 600px;
+  width: 100%;
   height: auto;
   padding: 10px;
   border-radius: 20px;
@@ -113,54 +114,104 @@ body {
 }
 
 @media (max-width: 1100px) {
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #thumbnail-container {
-    top: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.37);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   #main-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    width: 100%;
   }
+
   #next-btn-container {
     grid-column-start: 2;
     grid-row-start: 2;
-    display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    width: 100%;
   }
+
   #previous-btn-container {
     grid-column-start: 2;
     grid-row-start: 2;
-    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
   }
+
   #next-btn {
     width: 50px;
     height: 50px;
-    margin-top: 30px;
+    margin-top: 10px;
   }
 
   #previous-btn {
     width: 50px;
     height: 50px;
-    margin-top: 30px;
+    margin-top: 10px;
   }
+
   #thumbnail-img {
-    min-width: none;
     max-width: 75px;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    margin: 10px;
+    padding: 0 10px;
+  }
+
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  #fullscreen-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  #fullscreen-img {
+    max-width: 100%;
     height: auto;
-    padding: 10px;
-    border-radius: 20px;
+  }
+
+  #next-btn-container {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  #previous-btn-container {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  #next-btn {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+  }
+
+  #previous-btn {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+  }
+
+  #thumbnail-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  #thumbnail-img {
+    max-width: 60px;
   }
 }

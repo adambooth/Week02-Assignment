@@ -60,6 +60,7 @@ nextBtnContainer.appendChild(nextBtn);
 let currentImageIndex = 0;
 
 function displayFullscreenImage(index) {
+  currentImageIndex = index;
   fullscreenContainer.innerHTML = "";
   const fullscreenImg = document.createElement("img");
   fullscreenImg.id = "fullscreen-img";
